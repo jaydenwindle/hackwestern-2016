@@ -1,10 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
+import { Navigator } from 'react-native';
+
 import ContactSchema from '../Models/contact';
 
 // Database setup
@@ -12,36 +8,29 @@ const Realm = require('realm');
 let realm = new Realm({
     schema: [ContactSchema]
 });
+realm.write(() => {
+    let contacts = realm.objects('Contact');
+    realm.delete(contacts);
+});
 
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import MainApp from '../Views/MainApp';
+import AddContact from '../Views/AddContact';
 
-import { Container, Content, Tabs, Header, Title } from 'native-base';
-
-import Timeline from '../Components/Timeline';
-import Contacts from '../Components/Contacts';
-import AddContact from '../Components/AddContact';
-
-import uplyncTheme from '../Themes/uplyncTheme';
 
 export default class uplync extends Component {
+  _renderScene(route, navigator) {
+        if (route.id === 1) {
+          return <MainApp navigator = {navigator} />
+        } else if (route.id === 2) {
+          return <AddContact navigator = {navigator} />
+        }
+  }
+
   render() {
     return (
-        <Container>
-          <Header>
-            <Title>Header</Title>
-          </Header>
-            <Content theme={ uplyncTheme }>
-              <Tabs>
-                  <Timeline tabLabel="Timeline"/>
-                  <AddContact tabLabel="Contacts"/>
-              </Tabs>
-          </Content>
-        </Container>
+      <Navigator
+        initialRoute={{id: 1, }}
+        renderScene={this._renderScene} />
     );
   }
 }
