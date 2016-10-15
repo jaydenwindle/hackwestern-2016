@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-import { Container, Content, List, ListItem, Icon, Text, Button, Grid } from 'native-base';
+import { Container, Content, List, ListItem, Icon, Text, Button, Grid, Row } from 'native-base';
 
 
 export default class Profile extends Component { // eslint-disable-line
@@ -19,27 +19,46 @@ export default class Profile extends Component { // eslint-disable-line
       <Container>
         <Content padder>
             <List>
+            <Row style={style.form}>
+            <Icon name="ios-person"/>
               <ListItem>
-                <Icon name="ios-person"/>
-                <Text>  Name</Text>
+                <Text>John Doe</Text>
               </ListItem>
+              </Row>
+              <Row style={style.form}>
+              <Icon name="ios-call"/>
               <ListItem>
-                <Text>  Phone</Text>
+                <Text>964-222-1112</Text>
               </ListItem>
+              </Row>
+              <Row style={style.form}>
+              <Icon name="ios-mail"/>
               <ListItem>
-                <Icon name="ios-mail"/>
-                <Text>  Email</Text>
+                <Text>johndoe@gmail.com</Text>
               </ListItem>
+              </Row>
+              <Row style={style.form}>
+              <Icon name="logo-facebook"/>
               <ListItem>
-                <Text>  Facebook</Text>
+                <Text>facebook.com/john.doe</Text>
               </ListItem>
+              </Row>
+              <Row style={style.form}>
               <ListItem>
-                <Text>  Twitter</Text>
+                <Text>@johnDoe</Text>
               </ListItem>
+              </Row>
+
             </List>
             <Button onPress={this._EditProfile}>Edit Profile</Button>
         </Content>
       </Container>
     );
+  }
+}
+
+const style = {
+  form: {
+    margin: 20
   }
 }
