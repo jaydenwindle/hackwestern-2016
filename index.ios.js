@@ -13,42 +13,24 @@ import {
   View
 } from 'react-native';
 
-import { Container, Content, Tabs } from 'native-base';
+import { Container, Content, Tabs, Header, Title } from 'native-base';
 
 export default class uplync extends Component {
   render() {
     return (
-      <View style={styles.container}>
         <Container>
+          <Header>
+            <Title>Header</Title>
+          </Header>
             <Content>
               <Tabs>
-                  <TabOne tabLabel='One' />
-                  <TabTwo tabLabel='Two' />
+                  <Text tabLabel="Hello1">Hello world</Text>
+                  <Text tabLabel="Hello2">Hello world</Text>
               </Tabs>
           </Content>
         </Container>
-      </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('uplync', () => uplync);
