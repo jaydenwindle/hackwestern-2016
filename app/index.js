@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 
 import { Container, Content, Tabs, Header, Title } from 'native-base';
+import uplyncTheme from '../Themes/uplyncTheme';
 
 export default class uplync extends Component {
   render() {
@@ -22,7 +23,7 @@ export default class uplync extends Component {
           <Header>
             <Title>Header</Title>
           </Header>
-            <Content>
+            <Content theme={uplyncTheme}>
               <Tabs>
                   <Text tabLabel="Hello1">Hello world</Text>
                   <Text tabLabel="Hello2">Hello world</Text>
