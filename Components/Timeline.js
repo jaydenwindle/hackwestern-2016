@@ -26,7 +26,7 @@ export default class Timeline extends Component {
         <Content padder>
           <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <ContactCard source={rowData.img} name={rowData.name} description={rowData.desc}></ContactCard>}
+          renderRow={(rowData) => <ContactCard source={rowData.img} name={rowData.name} description={rowData.desc} lastInt={rowData.lastContact.toDateString()}></ContactCard>}
           />
         </Content>
       </Container>

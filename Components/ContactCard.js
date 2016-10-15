@@ -13,7 +13,7 @@ export default class ContactCard extends Component {
                 <Text style={style.name}>{this.props.name}</Text>
               </Row>
               <Row>
-                <Text style={style.lastMet}>Last interaction: Christmas</Text>
+                <Text style={style.lastMet}>Last interaction: {this.props.lastInt}</Text>
               </Row>
             </Grid>
         </CardItem>
