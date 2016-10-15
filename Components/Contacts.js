@@ -7,7 +7,8 @@ export default class Contacts extends Component { // eslint-disable-line
   render() {
     return (
       <Container>
-        <Content padder>
+        <Content>
+          <ContactList/>
         </Content>
       </Container>
     );

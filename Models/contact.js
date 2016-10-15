@@ -6,7 +6,7 @@ const ContactSchema = {
     name:     'string',
     email:    'string',
     phone:     {type: 'string', optional: true},
-    picture:  {type: 'data', optional: true}, 
+    picture:  {type: 'data', optional: true},
     lastContact: {type: 'date', optional: true}
   }
 };

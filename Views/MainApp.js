@@ -25,12 +25,14 @@ export default class MainApp extends Component {
     render() {
         return(
             <Container>
-                <Header>
-                    <Title>UpLink</Title>
-                    <Button onPress={this._addContact.bind(this)}>Add</Button>
+                <Header backgroundColor="#44486C">
+                    <Title style={{color: '#FFF'}}>UpLink</Title>
+                    <Button onPress={this._addContact.bind(this)} backgroundColor="#25C8AE">
+                      <Text style={{color: "#FFF"}}>Add</Text>
+                    </Button>
                 </Header>
-                <Content theme={ uplyncTheme }>
-                    <Tabs>
+                <Content theme={ uplyncTheme } style={style.background}>
+                    <Tabs backgroundColor="#6A6E91">
                         <Timeline tabLabel="Timeline"/>
                         <Contacts tabLabel="Contacts"/>
                     </Tabs>
@@ -38,4 +40,13 @@ export default class MainApp extends Component {
             </Container>
         )
     }
+}
+
+const style = {
+  button: {
+    color: "#FFF"
+  },
+  background: {
+    backgroundColor: "#989BAF"
+  }
 }

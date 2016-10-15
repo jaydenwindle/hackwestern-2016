@@ -34,24 +34,24 @@ export default class AddContact extends Component {
     render() {
         return(
             <Container>
-                <Header>
+                <Header backgroundColor="#44486C">
                     <Button transparent onPress={this._goBack.bind(this)}>
                         <Icon name='ios-arrow-back' ></Icon>
                     </Button>
-                    
+
                     <Title>Add Contact</Title>
-                    
-                    <Button transparent 
+
+                    <Button transparent
                     onPress={this._addContact.bind(this)}>
                         <Icon name='md-checkmark' ></Icon>
                     </Button>
                 </Header>
 
-                <Content theme={ uplyncTheme }>
+                <Content theme={ uplyncTheme } style = {style.bcg}>
                     <Form ref="form">
-                        <TextInput type="TextInput" name="fname" placeholder="First Name"/>
-                        <TextInput type="TextInput" name="lname" placeholder="Last Name"/>
-                        <TextInput type="TextInput" name="email" placeholder="Email"/>
+                        <TextInput type="TextInput" name="fname" placeholder="First Name" style={style.input}/>
+                        <TextInput type="TextInput" name="lname" placeholder="Last Name" style={style.input}/>
+                        <TextInput type="TextInput" name="email" placeholder="Email" style={style.input}/>
                     </Form>
                 </Content>
 
@@ -59,4 +59,14 @@ export default class AddContact extends Component {
         )
     }
 
+}
+
+const style = {
+  bcg: {
+    backgroundColor: "#6A6E91"
+  },
+
+  input: {
+    color: "#FFFFFF"
+  }
 }

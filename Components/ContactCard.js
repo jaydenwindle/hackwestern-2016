@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Modal, View, TouchableHighlight } from 'react-native';
-import { Card, CardItem, Thumbnail, Grid, Row, Button } from 'native-base';
+import { Card, CardItem, Thumbnail, Grid, Row, Button, Container, Content } from 'native-base';
 
 export default class ContactCard extends Component {
 
@@ -11,31 +11,31 @@ export default class ContactCard extends Component {
     }
   }
 
-
   render() {
     return(
-      <View>
-      <Card>
-        <CardItem>
-            <Thumbnail size={80} source={this.props.source} />
-            <Grid>
-              <Row>
-                <Text style={style.name}>{this.props.name}</Text>
-                <Text style={style.description}>{`"${this.props.description}"`}</Text>
-              </Row>
-              <Row>
-                <Text style={style.lastMet}>Last interaction: Christmas</Text>
-              </Row>
-              <Row>
-                <Button style = {style.connectButton} small={true} rounded={true} onPress = {() => {
-                    this.setState({modalVisible: !this.state.modalVisible});
-                }}>
-                  Connect
-                </Button>
-              </Row>
-            </Grid>
-        </CardItem>
-      </Card>
+      <Container>
+        <Content>
+          <Card style={style.card}>
+            <CardItem>
+                <Thumbnail size={60} source={this.props.source} />
+                <Grid>
+                  <Row>
+                    <Text style={style.name}>{this.props.name}</Text>
+                    <Text style={style.description}>{`"${this.props.description}"`}</Text>
+                  </Row>
+                  <Row>
+                    <Text style={style.lastMet}>Last interaction: Christmas</Text>
+                  </Row>
+                  <Row>
+                    <Button style = {style.connectButton} small={true} rounded={true} onPress = {() => {
+                        this.setState({modalVisible: !this.state.modalVisible});
+                    }}>
+                      Connect
+                    </Button>
+                  </Row>
+                </Grid>
+            </CardItem>
+          </Card>
       <Modal
         animationType={"slide"}
         transparent={false}
@@ -54,7 +54,8 @@ export default class ContactCard extends Component {
         </View>
        </View>
       </Modal>
-      </View>
+      </Content>
+    </Container>
     );
   }
 }

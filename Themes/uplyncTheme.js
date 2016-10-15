@@ -15,7 +15,7 @@ export default {
     btnDisabledClr: '#f1f1f1',
 
     get btnPrimaryBg () {
-        return this.brandPrimary;
+        return "#25C8AE";
     },
     get btnPrimaryColor () {
         return this.inverseTextColor;
@@ -79,9 +79,11 @@ export default {
 
 
     // Color
-    brandPrimary : '#5067FF',
+    brandPrimary : '#44486C',
+    brandPrimaryDark : '#6A6E91',
+    brandLightPrimary: '#989BAF',
     brandInfo: '#5bc0de',
-    brandSuccess: '#5cb85c',
+    brandSuccess: '#25C8AE',
     brandDanger: '#d9534f',
     brandWarning: '#f0ad4e',
     brandSidebar: '#252932',
@@ -108,19 +110,20 @@ export default {
 
 
     //FooterTab
-    tabBarTextColor: (Platform.OS === 'ios' ) ? '#6b6b6b' : '#b3c7f9',
+    tabBarTextColor: (Platform.OS === 'ios' ) ? '#FFFFFF' : '#b3c7f9',
     tabBarActiveTextColor: (Platform.OS === 'ios' ) ? '#007aff' : '#fff',
     tabActiveBgColor: (Platform.OS=='ios') ? '#cde1f9' : undefined,
 
 
     // Header
-    iosToolbarBtnColor: '#007aff',
-    toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#F8F8F8' : '#4179F7',
+    iosToolbarBtnColor: '#25C8AE',
+    toolbarDefaultBg: (Platform.OS === 'ios' ) ? '#44486C' : '#4179F7',
     toolbarHeight: (Platform.OS === 'ios' ) ? 64 : 56,
     toolbarIconSize: (Platform.OS === 'ios' ) ? 20 : 22,
     toolbarInputColor: '#CECDD2',
     toolbarInverseBg: '#222',
-    toolbarTextColor: (Platform.OS==='ios') ? '#000' : '#fff',
+    toolbarTextColor: (Platform.OS==='ios') ? '#FFF' : '#fff',
+
     get statusBarColor() {
         return Color(this.toolbarDefaultBg).darken(0.2).hexString();
     },
@@ -192,9 +195,9 @@ export default {
 
 
     // Tabs
-    tabBgColor: '#F8F8F8',
+    tabBgColor: '#6A6E91',
     tabFontSize: 15,
-    tabTextColor: '#000',
+    tabTextColor: '#FFF',
 
 
     // Text
