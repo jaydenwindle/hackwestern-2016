@@ -7,7 +7,7 @@ import {
   View
 } from 'react-native';
 
-import { Container, Content, Tabs, Header, Title, Grid, Row } from 'native-base';
+import { Container, Content, Tabs, Header, Title, Grid, Row, Button } from 'native-base';
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
@@ -19,27 +19,28 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class MainApp extends Component {
   _onFabButtonClick() {
-    this.props.navigator.push({id: 2});
+      this.props.navigator.push({id: 2});
   }
 
-  render() {
-    return(
-      <Container>
-        <Header>
-          <Title>UpLink</Title>
-        </Header>
-          <Content theme={ uplyncTheme }>
-            <Grid>
-              <Row style = {{height: 500}}>
-                <Tabs>
-                    <Timeline tabLabel="Timeline"/>
-                    <Contacts tabLabel="Contacts"/>
-                    <Profile tabLabel="Profile" navigator={this.props.navigator}/>
-                </Tabs>
-              </Row>
-            </Grid>
-        </Content>
-      </Container>
-    )
-  }
+    render() {
+        return(
+            <Container>
+                <Header>
+                    <Title>UpLink</Title>
+                </Header>
+                <Content theme={ uplyncTheme }>
+                    <Grid>
+                        <Row style = {{height: 500}}>
+                        <Tabs>
+                        <Timeline tabLabel="Timeline"/>
+                        <Contacts tabLabel="Contacts"/>
+                        <Profile tabLabel="Profile" navigator={this.props.navigator}/>
+                        </Tabs>
+                    </Row>
+                    </Grid>
+                    <Button onPress={this._onFabButtonClick.bind(this)}>Add Contact</Button>
+                </Content>
+            </Container>
+        )
+    }
 }

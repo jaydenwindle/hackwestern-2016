@@ -1,3 +1,5 @@
+const Realm = require('realm');
+
 const ContactSchema = {
   name: 'Contact',
   properties: {
@@ -8,4 +10,26 @@ const ContactSchema = {
   }
 };
 
-module.exports = ContactSchema;
+let realm = new Realm({schema: [ContactSchema]});
+
+function add(name, email) {
+    realm.write(() => {
+        let c = realm.create('Contact', {
+            name: name,
+            email: email,
+        });
+    });
+}
+
+function remove(name) {
+    realm.write(() => {
+        let c = realm.objects('Contact').filtered("name = " + name);
+        realm.delete(c);
+    });
+}
+
+module.exports = {
+    db: realm,
+    add: add,
+    remove: remove
+};

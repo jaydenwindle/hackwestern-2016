@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Navigator, AppRegistry } from 'react-native';
 
-import ContactSchema from '../Models/contact';
-
 import MainApp from '../Views/MainApp';
 import AddContact from '../Views/AddContact';
 import EditProfile from '../Components/EditProfile';
-
-database = []; // simple database for now
 
 export default class uplync extends Component {
 
@@ -29,7 +25,6 @@ export default class uplync extends Component {
     );
   }
 }
-
 
 
 AppRegistry.registerComponent('uplync', () => uplync);

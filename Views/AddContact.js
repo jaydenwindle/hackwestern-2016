@@ -20,30 +20,37 @@ export default class AddContact extends Component {
 
     _addContact() {
         console.log(this.refs.form.getValues());
+        this._goBack();
+    }
+
+    _goBack() {
+        this.props.navigator.pop();
     }
 
     render() {
         return(
             <Container>
                 <Header>
-                    <Button transparent>
-                        <Icon name='ios-arrow-back' />
+                    <Button transparent onPress={this._goBack.bind(this)}>
+                        <Icon name='ios-arrow-back' ></Icon>
                     </Button>
                     
-                    <Title>Header</Title>
+                    <Title>Add Contact</Title>
                     
-                    <Button transparent>
-                        <Icon name='ios-checkmark' />
+                    <Button transparent 
+                    onPress={this._addContact.bind(this)}>
+                        <Icon name='md-checkmark' ></Icon>
                     </Button>
                 </Header>
+
                 <Content theme={ uplyncTheme }>
                     <Form ref="form">
                         <TextInput type="TextInput" name="fname" placeholder="First Name"/>
                         <TextInput type="TextInput" name="lname" placeholder="Last Name"/>
                         <TextInput type="TextInput" name="email" placeholder="Email"/>
                     </Form>
-                    <Button block onPress={this._addContact.bind(this)}>Submit</Button>
                 </Content>
+
             </Container>
         )
     }
