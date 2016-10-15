@@ -5,6 +5,18 @@
  */
 
 import React, { Component } from 'react';
+import ContactSchema from './contact';
+
+// Database setup
+const Realm = require('realm');
+let realm = new Realm({
+    schema: [ContactSchema]
+});
+realm.write(() => {
+    let contacts = realm.objects('Contact');
+    realm.delete(contacts);
+});
+
 
 import {
   AppRegistry,
