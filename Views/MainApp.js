@@ -11,7 +11,7 @@ import { Container, Content, Tabs, Header, Title, Grid, Row, Button } from 'nati
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
-import Profile from '../Components/Profile';
+// import Profile from '../Components/Profile';
 import uplyncTheme from '../Themes/uplyncTheme';
 
 import ActionButton from 'react-native-action-button';
@@ -33,7 +33,6 @@ export default class MainApp extends Component {
                     <Tabs>
                         <Timeline tabLabel="Timeline"/>
                         <Contacts tabLabel="Contacts"/>
-                        <Profile tabLabel="Profile" navigator={this.props.navigator}/>
                     </Tabs>
                 </Content>
             </Container>
