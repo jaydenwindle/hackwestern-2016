@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import { Container, Content, Text } from 'native-base';
 
-export default class TabOne extends Component { // eslint-disable-line
+export default class Timeline extends Component { // eslint-disable-line
 
-  render() { // eslint-disable-line
+  render() {
     return (
-      <Container> 
+      <Container>
         <Content padder>
           <Text>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.

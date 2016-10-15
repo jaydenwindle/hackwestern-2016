@@ -27,8 +27,8 @@ import {
 
 import { Container, Content, Tabs, Header, Title } from 'native-base';
 
-import TabOne from '../Components/TabOne';
-import TabTwo from '../Components/TabTwo';
+import Timeline from '../Components/Timeline';
+import Contacts from '../Components/Contacts';
 
 import uplyncTheme from '../Themes/uplyncTheme';
 
@@ -41,8 +41,8 @@ export default class uplync extends Component {
           </Header>
             <Content theme={ uplyncTheme }>
               <Tabs>
-                  <TabOne tabLabel="One"/>
-                  <TabTwo tabLabel="Two"/>
+                  <Timeline tabLabel="Timeline"/>
+                  <Contacts tabLabel="Contacts"/>
               </Tabs>
           </Content>
         </Container>
