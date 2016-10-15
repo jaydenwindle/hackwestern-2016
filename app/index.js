@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import ContactSchema from './contact';
+import ContactSchema from '../Models/contact';
 
 // Database setup
 const Realm = require('realm');
