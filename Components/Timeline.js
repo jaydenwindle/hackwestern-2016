@@ -2,25 +2,28 @@ import React, { Component } from 'react';
 
 import { Container, Content, Text, ListView } from 'native-base';
 
-export default class Timeline extends Component { // eslint-disable-line
+import ContactCard from './ContactCard';
+
+export default class Timeline extends Component {
+
+  _generateCards() {
+    var cards = [];
+    var img1 = require(`../img/face1.jpg`);
+    var img2 = require(`../img/face2.jpg`);
+    var img3 = require(`../img/face3.jpg`);
+    var names = ['John James', 'Barry Allen', 'Clark Kent'];
+    var desc = ['Cool guy', 'Even cooler guy', 'The coolest guy'];
+    cards.push(<ContactCard source={img1} name={names[0]} description={desc[0]} />);
+    cards.push(<ContactCard source={img2} name={names[1]} description={desc[1]} />);
+    cards.push(<ContactCard source={img3} name={names[2]} description={desc[2]} />);
+    return cards;
+  }
 
   render() {
     return (
       <Container>
         <Content padder>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-            venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-            Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-            Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
-            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-            viverra quis, feugiat a, tellus.
-          </Text>
+          {this._generateCards()}
         </Content>
       </Container>
     );
