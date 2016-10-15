@@ -18,7 +18,6 @@ export default class Profile extends Component { // eslint-disable-line
     return (
       <Container>
         <Content padder>
-          <Grid>
             <List>
               <ListItem>
                 <Icon name="ios-person"/>
@@ -39,7 +38,6 @@ export default class Profile extends Component { // eslint-disable-line
               </ListItem>
             </List>
             <Button onPress={this._EditProfile}>Edit Profile</Button>
-          </Grid>
         </Content>
       </Container>
     );
