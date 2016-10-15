@@ -15,7 +15,6 @@ import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
 import uplyncTheme from '../Themes/uplyncTheme';
 
-
 export default class AddContact extends Component {
   render() {
     return(

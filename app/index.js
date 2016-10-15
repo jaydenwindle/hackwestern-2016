@@ -5,9 +5,11 @@ import ContactSchema from '../Models/contact';
 
 // Database setup
 const Realm = require('realm');
+
 let realm = new Realm({
     schema: [ContactSchema]
 });
+
 realm.write(() => {
     let contacts = realm.objects('Contact');
     realm.delete(contacts);
