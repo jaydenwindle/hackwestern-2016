@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navigator } from 'react-native';
+import { Navigator, AppRegistry } from 'react-native';
 
 import ContactSchema from '../Models/contact';
 
