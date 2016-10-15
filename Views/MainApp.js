@@ -12,6 +12,11 @@ import { Container, Content, Tabs, Header, Title, Grid, Row, Button, Thumbnail }
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
+<<<<<<< Updated upstream
+=======
+import App from '../app/App';
+// import Profile from '../Components/Profile';
+>>>>>>> Stashed changes
 import uplyncTheme from '../Themes/uplyncTheme';
 
 import ActionButton from 'react-native-action-button';
@@ -37,6 +42,7 @@ export default class MainApp extends Component {
                     <Tabs backgroundColor="#6A6E91">
                         <Timeline tabLabel="Timeline"/>
                         <Contacts tabLabel="Contacts"/>
+                        <App tabLabel="Notification"/>
                     </Tabs>
                 </Content>
             </Container>

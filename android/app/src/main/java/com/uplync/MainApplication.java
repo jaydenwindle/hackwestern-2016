@@ -14,6 +14,9 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.List;
 
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
+
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -27,7 +30,8 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new VectorIconsPackage(),
-            new RealmReactPackage()
+            new RealmReactPackage(),
+              new ReactNativePushNotificationPackage()
       );
     }
   };
