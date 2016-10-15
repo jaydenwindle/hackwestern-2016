@@ -17,20 +17,21 @@ export default class EditProfile extends Component { // eslint-disable-line
   render() {
     return (
       <Container>
-        <Content padder>
-          <Grid>
+        <Content>
+          <Grid style={style.gridWidth}>
             <Row style={style.form}>
             <ListItem>
               <InputGroup>
                 <Icon name="ios-person"/>
-                <Input placeholder="Name"/>
+                <Input placeholder="Name" style={style.input}/>
               </InputGroup>
             </ListItem>
             </Row>
             <Row style={style.form}>
             <ListItem>
               <InputGroup>
-                <Input placeholder="Phone"/>
+                <Icon name="ios-call"/>
+                <Input placeholder="Phone" style={style.input}/>
               </InputGroup>
             </ListItem>
             </Row>
@@ -38,26 +39,28 @@ export default class EditProfile extends Component { // eslint-disable-line
             <ListItem>
               <InputGroup>
                 <Icon name="ios-mail"/>
-                <Input placeholder="Email"/>
+                <Input placeholder="Email" style={style.input}/>
               </InputGroup>
             </ListItem>
             </Row>
             <Row style={style.form}>
             <ListItem>
               <InputGroup>
-                <Input placeholder="Facebook"/>
+                <Icon name="logo-facebook"/>
+                <Input placeholder="Facebook" style={style.input}/>
               </InputGroup>
             </ListItem>
             </Row>
             <Row style={style.form}>
             <ListItem>
               <InputGroup>
-                <Input placeholder="Twitter"/>
+                <Icon name="logo-twitter"/>
+                <Input placeholder="Twitter" style={style.input}/>
               </InputGroup>
             </ListItem>
             </Row>
           </Grid>
-          <Button onPress={this._UpdateProfile.bind(this)}>Back</Button>
+          <Button onPress={this._UpdateProfile.bind(this)} style={style.backButton}>Back</Button>
         </Content>
       </Container>
     );
@@ -67,5 +70,11 @@ export default class EditProfile extends Component { // eslint-disable-line
 const style = {
   form: {
     margin: 30
+  },
+  input: {
+    width: 300
+  },
+  backButton: {
+    marginLeft: 325
   }
 }

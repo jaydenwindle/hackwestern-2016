@@ -20,13 +20,19 @@ export default class Timeline extends Component {
     console.log(this.state.dataSource);
   }
 
+  _renderContactCard(rowData, rowId) {
+    return (
+      <ContactCard key={rowId} source={rowData.img} name={rowData.name} description={rowData.desc} lastInt={rowData.lastContact.toDateString()}></ContactCard>
+    )
+  }
+
   render() {
     return (
       <Container>
         <Content padder>
           <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <ContactCard source={rowData.img} name={rowData.name} description={rowData.desc} lastInt={rowData.lastContact.toDateString()}></ContactCard>}
+          renderRow={(rowData, sectionId, rowId) => this._renderContactCard(rowData, rowId)}
           />
         </Content>
       </Container>

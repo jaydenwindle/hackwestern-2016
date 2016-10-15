@@ -18,6 +18,7 @@ export default class Profile extends Component { // eslint-disable-line
     return (
       <Container>
         <Content padder>
+          <Grid style={style.grid}>
             <List>
             <Row style={style.form}>
             <Icon name="ios-person"/>
@@ -48,9 +49,9 @@ export default class Profile extends Component { // eslint-disable-line
                 <Text>@johnDoe</Text>
               </ListItem>
               </Row>
-
             </List>
-            <Button onPress={this._EditProfile}>Edit Profile</Button>
+            </Grid>
+            <Button onPress={this._EditProfile} style={style.editProfileButton}>Edit Profile</Button>
         </Content>
       </Container>
     );
@@ -60,5 +61,11 @@ export default class Profile extends Component { // eslint-disable-line
 const style = {
   form: {
     margin: 20
+  },
+  editProfileButton: {
+    marginLeft: 270
+  },
+  grid: {
+    height: 400
   }
 }
