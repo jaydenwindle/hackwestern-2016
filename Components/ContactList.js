@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {ListView} from 'react-native';
 
-import ContactCard from './ContactCard';
 import { Container, Content, Text} from 'native-base';
 
 export default class ContactList extends Component { // eslint-disable-line
