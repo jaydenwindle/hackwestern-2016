@@ -5,10 +5,10 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput, Slider, DatePickerIOS, Picker, PickerIOS, Switch
+  TextInput,
 } from 'react-native';
 
-import { Container, Content, Tabs, Header, Title} from 'native-base';
+import { Container, Content, Tabs, Header, Title } from 'native-base';
 import Form from 'react-native-form'
 
 import Timeline from '../Components/Timeline';
@@ -25,8 +25,7 @@ export default class AddContact extends Component {
         </Header>
           <Content theme={ uplyncTheme }>
             <Form ref="form">
-              <Switch type="Switch" name="mySwitch" />
-              <Slider type="Slider" name="mySlider" />
+              <TextInput type="TextInput" name="myTextInput" />
             </Form>
           </Content>
       </Container>

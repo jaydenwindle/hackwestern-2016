@@ -19,6 +19,7 @@ import EditProfile from '../Components/EditProfile';
 
 
 export default class uplync extends Component {
+
   _renderScene(route, navigator) {
         if (route.id === 1) {
           return <MainApp navigator = {navigator} />
