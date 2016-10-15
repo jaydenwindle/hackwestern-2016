@@ -11,6 +11,8 @@ import {
 import { Container, Content, Tabs, Header, Title, Button, Icon } from 'native-base';
 import Form from 'react-native-form'
 
+var contact = require('../Models/contact.js');
+
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
 import uplyncTheme from '../Themes/uplyncTheme';
@@ -18,7 +20,10 @@ import uplyncTheme from '../Themes/uplyncTheme';
 export default class AddContact extends Component {
 
     _addContact() {
-        console.log(this.refs.form.getValues());
+        var data = this.refs.form.getValues();
+        console.log(data);
+
+        contact.add(data.fname + data.lname, data.email);
         this._goBack();
     }
 

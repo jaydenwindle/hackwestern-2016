@@ -5,13 +5,12 @@ import { Card, CardItem, Thumbnail, Grid, Row } from 'native-base';
 export default class ContactCard extends Component {
   render() {
     return(
-      <Card>
+      <Card style={style.card}>
         <CardItem>
             <Thumbnail size={80} source={this.props.source} />
             <Grid>
               <Row>
                 <Text style={style.name}>{this.props.name}</Text>
-                <Text style={style.description}>{`"${this.props.description}"`}</Text>
               </Row>
               <Row>
                 <Text style={style.lastMet}>Last interaction: Christmas</Text>
@@ -26,7 +25,8 @@ export default class ContactCard extends Component {
 const style = {
   name: {
     alignSelf: 'flex-start',
-    fontSize: 12,
+    fontSize: 14,
+    marginBottom: 5,
     marginRight: 75
   },
   description: {
@@ -37,5 +37,8 @@ const style = {
     alignSelf: 'flex-start',
     color: '#7e7e7e',
     fontSize: 10
-  }
+  },
+    card: {
+        marginBottom: 10,
+    }
 }

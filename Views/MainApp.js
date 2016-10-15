@@ -18,7 +18,7 @@ import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class MainApp extends Component {
-  _onFabButtonClick() {
+  _addContact() {
       this.props.navigator.push({id: 2});
   }
 
@@ -27,18 +27,14 @@ export default class MainApp extends Component {
             <Container>
                 <Header>
                     <Title>UpLink</Title>
+                    <Button onPress={this._addContact.bind(this)}>Add</Button>
                 </Header>
                 <Content theme={ uplyncTheme }>
-                    <Grid>
-                        <Row style = {{height: 500}}>
-                        <Tabs>
+                    <Tabs>
                         <Timeline tabLabel="Timeline"/>
                         <Contacts tabLabel="Contacts"/>
                         <Profile tabLabel="Profile" navigator={this.props.navigator}/>
-                        </Tabs>
-                    </Row>
-                    </Grid>
-                    <Button onPress={this._onFabButtonClick.bind(this)}>Add Contact</Button>
+                    </Tabs>
                 </Content>
             </Container>
         )

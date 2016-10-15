@@ -7,6 +7,7 @@ const ContactSchema = {
     email:    'string',
     phone:     {type: 'string', optional: true},
     picture:  {type: 'data', optional: true}, 
+    lastContact: {type: 'data', optional: true}
   }
 };
 
@@ -23,7 +24,8 @@ function add(name, email) {
 
 function remove(name) {
     realm.write(() => {
-        let c = realm.objects('Contact').filtered("name = " + name);
+        let c = realm.objects('Contact').filtered("name BEGINSWITH \"" + name + "\"");
+        console.log(c);
         realm.delete(c);
     });
 }
