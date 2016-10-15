@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Content, Text } from 'native-base';
+import { Container, Content, Text, ListView } from 'native-base';
 
 export default class Timeline extends Component { // eslint-disable-line
 

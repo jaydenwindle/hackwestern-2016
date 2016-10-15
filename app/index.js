@@ -12,11 +12,6 @@ const Realm = require('realm');
 let realm = new Realm({
     schema: [ContactSchema]
 });
-realm.write(() => {
-    let contacts = realm.objects('Contact');
-    realm.delete(contacts);
-});
-
 
 import {
   AppRegistry,
@@ -29,6 +24,7 @@ import { Container, Content, Tabs, Header, Title } from 'native-base';
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
+import AddContact from '../Components/AddContact';
 
 import uplyncTheme from '../Themes/uplyncTheme';
 
@@ -42,7 +38,7 @@ export default class uplync extends Component {
             <Content theme={ uplyncTheme }>
               <Tabs>
                   <Timeline tabLabel="Timeline"/>
-                  <Contacts tabLabel="Contacts"/>
+                  <AddContact tabLabel="Contacts"/>
               </Tabs>
           </Content>
         </Container>
