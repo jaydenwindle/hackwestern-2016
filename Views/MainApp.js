@@ -11,6 +11,7 @@ import { Container, Content, Tabs, Header, Title } from 'native-base';
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
+import Profile from '../Components/Profile';
 import uplyncTheme from '../Themes/uplyncTheme';
 
 import ActionButton from 'react-native-action-button';
@@ -31,6 +32,7 @@ export default class MainApp extends Component {
             <Tabs>
                 <Timeline tabLabel="Timeline"/>
                 <Contacts tabLabel="Contacts"/>
+                <Profile tabLabel="Profile" navigator={this.props.navigator}/>
             </Tabs>
             <ActionButton buttonColor="rgba(231,76,60,1)" onPress={this._onFabButtonClick.bind(this)} offsetY={0}>
             </ActionButton>

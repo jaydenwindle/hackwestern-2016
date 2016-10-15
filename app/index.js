@@ -15,6 +15,7 @@ realm.write(() => {
 
 import MainApp from '../Views/MainApp';
 import AddContact from '../Views/AddContact';
+import EditProfile from '../Components/EditProfile';
 
 
 export default class uplync extends Component {
@@ -23,6 +24,8 @@ export default class uplync extends Component {
           return <MainApp navigator = {navigator} />
         } else if (route.id === 2) {
           return <AddContact navigator = {navigator} />
+        } else if (route.id === 3) {
+          return <EditProfile navigator = {navigator} />
         }
   }
 
