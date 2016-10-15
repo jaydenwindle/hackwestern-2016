@@ -18,22 +18,9 @@ export default class ContactCard extends Component {
           <Card style={style.card}>
             <CardItem>
                 <Thumbnail size={60} source={this.props.source} />
-                <Grid>
-                  <Row>
-                    <Text style={style.name}>{this.props.name}</Text>
-                    <Text style={style.description}>{`"${this.props.description}"`}</Text>
-                  </Row>
-                  <Row>
-                    <Text style={style.lastMet}>Last interaction: Christmas</Text>
-                  </Row>
-                  <Row>
-                    <Button style = {style.connectButton} small={true} rounded={true} onPress = {() => {
-                        this.setState({modalVisible: !this.state.modalVisible});
-                    }}>
-                      Connect
-                    </Button>
-                  </Row>
-                </Grid>
+                <Text>Instrumental Songs</Text>
+                <Text note>Guitar</Text>
+
             </CardItem>
           </Card>
       <Modal

@@ -27,9 +27,6 @@ export default class MainApp extends Component {
             <Container>
                 <Header backgroundColor="#44486C">
                     <Title style={{color: '#FFF'}}>UpLink</Title>
-                    <Button onPress={this._addContact.bind(this)} backgroundColor="#25C8AE">
-                      <Text style={{color: "#FFF"}}>Add</Text>
-                    </Button>
                 </Header>
                 <Content theme={ uplyncTheme } style={style.background}>
                     <Tabs backgroundColor="#6A6E91">
@@ -37,6 +34,7 @@ export default class MainApp extends Component {
                         <Contacts tabLabel="Contacts"/>
                     </Tabs>
                 </Content>
+                <ActionButton onPress={this._addContact.bind(this)} backgroundColor="#25C8AE"></ActionButton>
             </Container>
         )
     }

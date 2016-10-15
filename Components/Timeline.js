@@ -33,6 +33,7 @@ export default class Timeline extends Component {
           <ListView
           dataSource={this.state.dataSource}
           renderRow={(rowData, sectionId, rowId) => this._renderContactCard(rowData, rowId)}
+          enableEmptySections={true}
           />
         </Content>
       </Container>
