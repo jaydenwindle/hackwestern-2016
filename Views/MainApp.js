@@ -26,7 +26,7 @@ export default class MainApp extends Component {
     return(
       <Container>
         <Header>
-          <Title>Header</Title>
+          <Title>UpLink</Title>
         </Header>
           <Content theme={ uplyncTheme }>
             <Grid>
@@ -36,8 +36,6 @@ export default class MainApp extends Component {
                     <Contacts tabLabel="Contacts"/>
                     <Profile tabLabel="Profile" navigator={this.props.navigator}/>
                 </Tabs>
-                <ActionButton buttonColor="rgba(231,76,60,1)" onPress={this._onFabButtonClick.bind(this)} offsetY={0}>
-                </ActionButton>
               </Row>
             </Grid>
         </Content>

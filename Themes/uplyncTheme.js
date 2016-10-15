@@ -211,7 +211,7 @@ export default {
     // Other
     borderRadiusBase: (Platform.OS === 'ios' ) ? 5 : 2,
     borderWidth: 1,
-    contentPadding: 10,
+    contentPadding: 20,
 
     get darkenHeader() {
         return Color(this.tabBgColor).darken(0.03).hexString();
