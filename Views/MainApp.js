@@ -7,7 +7,7 @@ import {
   View
 } from 'react-native';
 
-import { Container, Content, Tabs, Header, Title } from 'native-base';
+import { Container, Content, Tabs, Header, Title, Grid, Row } from 'native-base';
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
@@ -28,12 +28,16 @@ export default class MainApp extends Component {
           <Title>Header</Title>
         </Header>
           <Content theme={ uplyncTheme }>
-            <Tabs>
-                <Timeline tabLabel="Timeline"/>
-                <Contacts tabLabel="Contacts"/>
-            </Tabs>
-            <ActionButton buttonColor="rgba(231,76,60,1)" onPress={this._onFabButtonClick.bind(this)} offsetY={0}>
-            </ActionButton>
+            <Grid>
+              <Row style = {{height: 500}}>
+                <Tabs>
+                    <Timeline tabLabel="Timeline"/>
+                    <Contacts tabLabel="Contacts"/>
+                </Tabs>
+                <ActionButton buttonColor="rgba(231,76,60,1)" onPress={this._onFabButtonClick.bind(this)} offsetY={0}>
+                </ActionButton>
+              </Row>
+            </Grid>
         </Content>
       </Container>
     )
