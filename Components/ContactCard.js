@@ -32,6 +32,27 @@ export default class ContactCard extends Component {
           >
          <View style={{marginTop: 22}}>
           <View>
+            <Text>Via</Text>
+            <Button onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}>
+              <Icon name="ios-call"/>
+              Text Message
+            </Button>
+            <Button onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}>
+              <Icon name="ios-mail"/>
+              Email
+            </Button>
+            <Button onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}>
+              <Icon name="logo-facebook"/>
+              Facebook
+            </Button>
+            <Button onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}>
+              <Icon name="logo-twitter"/>
+              Twitter
+            </Button>
             <TouchableHighlight onPress={() => {
               this.setState({modalVisible: !this.state.modalVisible})}}>
               <Text>Hide Modal</Text>
