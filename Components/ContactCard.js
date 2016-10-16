@@ -16,11 +16,12 @@ export default class ContactCard extends Component {
       <Container>
         <Content>
           <Card style={style.card}>
-            <CardItem>
+            <CardItem onPress={() => {
+                    this.setState({modalVisible: true})
+                }}>
                 <Thumbnail size={60} source={this.props.source} />
-                <Text>Instrumental Songs</Text>
-                <Text note>Guitar</Text>
-
+                <Text>{this.props.name}</Text>
+                <Text note>{this.props.lastInt}</Text>
             </CardItem>
           </Card>
       <Modal

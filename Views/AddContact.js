@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
+  StyleSheet, Text,
   View,
   TextInput,
 } from 'react-native';
@@ -23,7 +22,7 @@ export default class AddContact extends Component {
         var data = this.refs.form.getValues();
         console.log(data);
 
-        contact.add(data.fname + data.lname, data.email);
+        contact.add(data.fname + " " + data.lname, data.email, data.source);
         this._goBack();
     }
 
@@ -49,9 +48,9 @@ export default class AddContact extends Component {
 
                 <Content theme={ uplyncTheme } style = {style.bcg}>
                     <Form ref="form">
-                        <TextInput type="TextInput" name="fname" placeholder="First Name" style={style.input}/>
-                        <TextInput type="TextInput" name="lname" placeholder="Last Name" style={style.input}/>
-                        <TextInput type="TextInput" name="email" placeholder="Email" style={style.input}/>
+                        <TextInput type="TextInput" name="fname" placeholder="First Name" placeholderTextColor= "#FFF" style={style.input}/>
+                        <TextInput type="TextInput" name="lname" placeholder="Last Name" placeholderTextColor = "#FFF" style={style.input}/>
+                        <TextInput type="TextInput" name="email" placeholder="Email" placeholderTextColor= "#FFF" style={style.input}/>
                     </Form>
                 </Content>
 
@@ -67,6 +66,6 @@ const style = {
   },
 
   input: {
-    color: "#FFFFFF"
+    color: "#FFFFFF",
   }
 }
