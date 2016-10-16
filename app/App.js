@@ -26,7 +26,7 @@ export default class App extends Component {
 
     this.handleAppStateChange = this.handleAppStateChange.bind(this);
     this.state = {
-      seconds: 5,
+      seconds: 10,
     };
   }
 
@@ -40,7 +40,7 @@ export default class App extends Component {
 
   handleAppStateChange(appState) {
     if (appState === 'background') {
-      let date = new Date(Date.now() + (this.state.seconds * 1000));
+      let date = new Date(Date.now() /*+ (this.state.seconds * 1000)*/);
 
       if (Platform.OS === 'ios') {
         date = date.toISOString();
@@ -55,8 +55,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
+      <View>
+        {/*<Text style={styles.welcome}>
           Choose your notification time in seconds.
         </Text>
         <Picker
@@ -67,7 +67,7 @@ export default class App extends Component {
           <Picker.Item label="5" value={5} />
           <Picker.Item label="10" value={10} />
           <Picker.Item label="15" value={15} />
-        </Picker>
+        </Picker>*/}
         <PushController />
       </View>
     );

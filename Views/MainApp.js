@@ -39,8 +39,8 @@ export default class MainApp extends Component {
                     <Tabs backgroundColor="#6A6E91">
                         <Timeline tabLabel="Timeline"/>
                         <Contacts tabLabel="Contacts"/>
-                        <App tabLabel="Notification"/>
                     </Tabs>
+                    <App/>
                 </Content>
             </Container>
         )

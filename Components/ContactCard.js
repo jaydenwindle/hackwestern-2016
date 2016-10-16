@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, Modal, View, TouchableHighlight } from 'react-native';
-import { Card, CardItem, Thumbnail, Grid, Row, Button, Container, Content } from 'native-base';
+import { Card, CardItem, Thumbnail, Grid, Row, Button, Container, Content, List, ListItem, Icon } from 'native-base';
 
 export default class ContactCard extends Component {
 
@@ -24,24 +24,21 @@ export default class ContactCard extends Component {
                 <Text note>{this.props.lastInt}</Text>
             </CardItem>
           </Card>
-      <Modal
-        animationType={"slide"}
-        transparent={false}
-        visible={this.state.modalVisible}
-        onRequestClose={() => {alert("Modal has been closed.")}}
-        >
-       <View style={{marginTop: 22}}>
-        <View>
-          <Text>Hello World!</Text>
-          <TouchableHighlight onPress={() => {
-            this.setState({modalVisible: !this.state.modalVisible})
-          }}>
-            <Text>Hide Modal</Text>
-          </TouchableHighlight>
-
-        </View>
-       </View>
-      </Modal>
+        <Modal
+          animationType={"slide"}
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {alert("Modal has been closed.")}}
+          >
+         <View style={{marginTop: 22}}>
+          <View>
+            <TouchableHighlight onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}>
+              <Text>Hide Modal</Text>
+            </TouchableHighlight>
+          </View>
+         </View>
+        </Modal>
       </Content>
     </Container>
     );
