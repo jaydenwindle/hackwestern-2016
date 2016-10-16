@@ -5,6 +5,7 @@ import MainApp from '../Views/MainApp';
 import AddContact from '../Views/AddContact';
 import EditProfile from '../Components/EditProfile';
 
+
 export default class uplync extends Component {
 
   _renderScene(route, navigator) {

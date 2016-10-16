@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Modal, View, TouchableHighlight } from 'react-native';
+import { Text, Modal, View, TouchableHighlight, TextInput } from 'react-native';
 import { Card, CardItem, Thumbnail, Grid, Row, Button, Container, Content, List, ListItem, Icon } from 'native-base';
 
 export default class ContactCard extends Component {
@@ -7,7 +7,8 @@ export default class ContactCard extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalVisible: false
+      modalVisible: false,
+      greeting: "Hey John! It's been a while. How are things?"
     }
   }
 
@@ -32,30 +33,36 @@ export default class ContactCard extends Component {
           >
          <View style={{marginTop: 22}}>
           <View>
-            <Text>Via</Text>
+            <TextInput value={this.state.greeting}></TextInput>
+            <Text style={{marginBottom: 10, alignSelf: 'center'}}>Reach out via:</Text>
             <Button onPress={() => {
-              this.setState({modalVisible: !this.state.modalVisible})}}>
+              this.setState({modalVisible: !this.state.modalVisible})}
+            } style={{marginBottom: 10, alignSelf: 'center'}}>
               <Icon name="ios-call"/>
               Text Message
             </Button>
             <Button onPress={() => {
-              this.setState({modalVisible: !this.state.modalVisible})}}>
+              this.setState({modalVisible: !this.state.modalVisible})}}
+              style={{marginBottom: 10, alignSelf: 'center'}}>
               <Icon name="ios-mail"/>
               Email
             </Button>
-            <Button onPress={() => {
-              this.setState({modalVisible: !this.state.modalVisible})}}>
+            <Button disabled onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}
+              style={{marginBottom: 10, alignSelf: 'center'}}>
               <Icon name="logo-facebook"/>
               Facebook
             </Button>
-            <Button onPress={() => {
-              this.setState({modalVisible: !this.state.modalVisible})}}>
+            <Button disabled onPress={() => {
+              this.setState({modalVisible: !this.state.modalVisible})}}
+              style={{marginBottom: 10, alignSelf: 'center'}}>
               <Icon name="logo-twitter"/>
               Twitter
             </Button>
             <TouchableHighlight onPress={() => {
-              this.setState({modalVisible: !this.state.modalVisible})}}>
-              <Text>Hide Modal</Text>
+              this.setState({modalVisible: !this.state.modalVisible})}}
+              style={{marginBottom: 10, alignSelf: 'center'}}>
+              <Text>Back</Text>
             </TouchableHighlight>
           </View>
          </View>

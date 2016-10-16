@@ -24,6 +24,7 @@ export default class AddContact extends Component {
 
         contact.add(data.fname + " " + data.lname, data.email, data.source);
         this._goBack();
+
     }
 
     _goBack() {

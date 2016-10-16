@@ -36,6 +36,7 @@ export default class ContactList extends Component { // eslint-disable-line
         )
       }
 
+
   render() {
     return (
       <Container>
