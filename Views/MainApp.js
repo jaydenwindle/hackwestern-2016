@@ -12,11 +12,8 @@ import { Container, Content, Tabs, Header, Title, Grid, Row, Button, Thumbnail }
 
 import Timeline from '../Components/Timeline';
 import Contacts from '../Components/Contacts';
-<<<<<<< Updated upstream
-=======
 import App from '../app/App';
 // import Profile from '../Components/Profile';
->>>>>>> Stashed changes
 import uplyncTheme from '../Themes/uplyncTheme';
 
 import ActionButton from 'react-native-action-button';
