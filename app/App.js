@@ -27,6 +27,7 @@ export default class App extends Component {
     this.handleAppStateChange = this.handleAppStateChange.bind(this);
     this.state = {
       seconds: 10,
+      popped_up: false
     };
   }
 
@@ -40,16 +41,19 @@ export default class App extends Component {
 
   handleAppStateChange(appState) {
     if (appState === 'background') {
-      let date = new Date(Date.now() /*+ (this.state.seconds * 1000)*/);
+      if(!this.state.popped_up){
+        let date = new Date(Date.now() /*+ (this.state.seconds * 1000)*/);
 
-      if (Platform.OS === 'ios') {
-        date = date.toISOString();
+        if (Platform.OS === 'ios') {
+          date = date.toISOString();
+        }
+
+        PushNotification.localNotificationSchedule({
+          message: "My Notification Message",
+          date,
+        });
+        this.setState({'popped_up': true});
       }
-
-      PushNotification.localNotificationSchedule({
-        message: "My Notification Message",
-        date,
-      });
     }
   }
 
