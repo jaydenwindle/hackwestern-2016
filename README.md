@@ -4,7 +4,11 @@ Our team project for Hack Western 2016
 ## Disclaimer!
 This repository is full of terrible awful no good very bad code. It is the product of no sleep, copious amounts of caffeine,
 and almost zero prior knowledge of the framework we were working with. This is by no means production-ready code, or even 
-alpha-ready code. That being said, we think that the idea behind this code is super cool, and we put a lot of effort into 
+alpha-ready code. 
+
+That being said, we think that the idea behind this code is super cool, and we put a lot of effort into 
 developing our idea. If you want to check out our award winning pitch deck (We won the "best pitch" competition sponsored by 
 Deloitte Digital!) for this project, you can take a look at it 
-[here](https://drive.google.com/file/d/0B_gkdA3q1aAdZUZoTHNEc2lJYXM/view?usp=sharing)
+[here](https://drive.google.com/file/d/0B_gkdA3q1aAdZUZoTHNEc2lJYXM/view?usp=sharing).
+
+If you think this is a cool idea and want to help us develop it further, or if you just want to know more about it, go ahead and shoot us a message [here](http://jaydenwindle.com/contact/).
