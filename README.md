@@ -1,4 +1,4 @@
-![UpLync Logo](https://drive.google.com/open?id=0BxSf4hsygWu5Q3lJVlZ1a1pZZGc)
+![UpLync Logo](https://s18.postimg.org/5syr0jrg9/ss_2016_10_15_at_06_36_48.png)
 
 # Uplync - Meaningful connections. Made simple. 
 Our team project for Hack Western 2016
