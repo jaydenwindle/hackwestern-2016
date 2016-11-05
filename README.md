@@ -3,6 +3,8 @@
 # Uplync - Meaningful connections. Made simple. 
 Our team project for Hack Western 2016
 
+We are currently continuing development on this idea in a private repo. This repo contains the original prototype which we built at Hack Western solely for the purposes of nostalgia. No changes will be made to this project in the future
+
 ## Disclaimer!
 This repository is full of terrible awful no good very bad code. It is the product of no sleep, copious amounts of caffeine,
 and almost zero prior knowledge of the framework we were working with. This is by no means production-ready code, or even 
